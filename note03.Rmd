@@ -1,0 +1,23 @@
+---
+title: "note03"
+output: html_notebook
+---
+
+
+```{r}
+load("./data-tidied/dataset.rdata")
+```
+
+
+# 3 시계열 시각화
+
+## 3.1 data.frame: ggplot2 패키지
+
+## 3.2 xts: xts 패키지
+
+## ts: ts:forecast 패키지
+
+## tsibble: feasts 패키지
+
+## 3.5 data.frame: timetk 패키지
+
