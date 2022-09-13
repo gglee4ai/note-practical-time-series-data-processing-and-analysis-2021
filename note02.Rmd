@@ -222,10 +222,9 @@ covid19.tsibble <- as_tsibble(covid19, index = date)
 ```{r}
 dataset <- ls()
 target <-
-  dataset %in% c("students", "employees", "covid19") |
-    stringr::str_detect(dataset, "[.]ts$") |
-    stringr::str_detect(dataset, "[.]xts$") |
-    stringr::str_detect(dataset, "[.]tsibble$")
+  stringr::str_detect(dataset, "students") |
+  stringr::str_detect(dataset, "employees") |
+  stringr::str_detect(dataset, "covid19")
 dataset[target]
 ```
 
