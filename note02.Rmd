@@ -216,7 +216,7 @@ covid19
 
 ```{r}
 covid19.ts <- ts(covid19[, 2:11], frequency = 365, start = c(2020, 04, 09))
-covid19.xts <- as.xts(covid19[, 3:10], order.by = covid19$date)
+covid19.xts <- as.xts(covid19[, 3:11], order.by = covid19$date)
 covid19.tsibble <- as_tsibble(covid19, index = date)
 ```
 
