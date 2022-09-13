@@ -210,7 +210,7 @@ covid19
 covid19 <-
   covid19 |>
   tidyr::pivot_wider(names_from = category, values_from = value)
-#  tidyr::spread(category, value) 
+#  tidyr::spread(category, value)
 covid19
 ```
 
@@ -224,8 +224,8 @@ covid19.tsibble <- as_tsibble(covid19, index = date)
 dataset <- ls()
 target <-
   stringr::str_detect(dataset, "students") |
-  stringr::str_detect(dataset, "employees") |
-  stringr::str_detect(dataset, "covid19")
+    stringr::str_detect(dataset, "employees") |
+    stringr::str_detect(dataset, "covid19")
 dataset[target]
 ```
 
