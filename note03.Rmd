@@ -10,8 +10,6 @@ library(dplyr)
 library(tidyr)
 library(zoo)
 theme_set(theme_gray(base_family = "NanumGothic"))
-knitr::opts_knit$set(global.par = TRUE)
-par(family = "NanumGothic")
 ```
 
 # 3 시계열 시각화
