@@ -1,0 +1,55 @@
+---
+title: "note07"
+output: html_notebook
+---
+
+
+```{r}
+load("./data-tidied/dataset.rdata")
+library(dplyr)
+library(tidyr)
+library(lubridate)
+library(ggplot2)
+theme_set(theme_gray(base_family = "NanumGothic"))
+```
+
+# 7 시계열 forecasting Part II - 시계열 분석 프레임워크
+
+## 7.1 성능 분석 지수
+
+## 7.2 fable 프레임워크
+
+
+```{r}
+split <- floor(nrow(students.tsibble) * 0.8)
+students.tsibble.tr <- students.tsibble[1:split, ]
+students.tsibble.test <- students.tsibble[(split + 1):nrow(students.tsibble), ]
+```
+
+```{r}
+# install.packages("fable")
+# install.packages("fable.prophet")
+library(fable)
+library(fable.prophet)
+```
+
+
+```{r}
+model.fable.students <- model(
+  students.tsibble.tr,
+  ets = ETS(학생수계),
+  # arima = ARIMA(학생수계),
+  # naive = NAIVE(학생수계),
+  # tslm = TSLM(학생계 ~ trend()),
+  # rw = RW(학생수계),
+  #mean = MEAN(학생수계),
+  #nnetar = NNETAR(학생수계),
+ # prophet = fable.prophet::prophet(학생수계)
+)
+                              
+```
+
+
+
+
+## 7.3 modeltime 프레임워크
