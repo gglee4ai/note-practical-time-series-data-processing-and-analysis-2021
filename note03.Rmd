@@ -277,7 +277,7 @@ employees.tsibble |>
 ## 3.5 data.frame: timetk 패키지
 
 ```{r}
-install.packages("timetk")
+# install.packages("timetk")
 library(timetk)
 ```
 
